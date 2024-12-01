@@ -1,0 +1,12 @@
+[Unit]
+Description=FastAPI service for Heart Attack Prediction
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/path/to/api
+ExecStart=/usr/bin/python3 /path/to/api/service.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
