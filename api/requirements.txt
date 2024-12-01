@@ -5,3 +5,5 @@ numpy
 scikit-learn
 pydantic
 lightgbm
+jinja2
+python-multipart

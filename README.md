@@ -76,3 +76,15 @@ A continuación se muestra un ejemplo de una solicitud y respuesta utilizando la
 #### Respuesta
 
 ![Respuesta FastAPI](screenshots/FastAPI_Response.png)
+
+### Ejemplo de Solicitud y Respuesta con Template Web
+
+A continuación se muestra un ejemplo de una solicitud y respuesta utilizando el template web:
+
+#### Solicitud
+
+![Solicitud FastAPI](screenshots/Template_Request.png)
+
+#### Respuesta
+
+![Respuesta FastAPI](screenshots/Template_Response.png)
