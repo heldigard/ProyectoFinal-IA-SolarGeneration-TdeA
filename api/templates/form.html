@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Generation Prediction</title>
+</head>
+<body>
+    <h1>Solar Generation Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="MODULE_TEMP">Module Temperature:</label>
+        <input type="number" step="any" id="MODULE_TEMP" name="MODULE_TEMP" required><br><br>
+        <label for="Amb_Temp">Ambient Temperature:</label>
+        <input type="number" step="any" id="Amb_Temp" name="Amb_Temp" required><br><br>
+        <label for="IRR_W_m2">Irradiance (W/m2):</label>
+        <input type="number" step="any" id="IRR_W_m2" name="IRR_W_m2" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction Result</h2>
+        <p>AC Power in Watts: {{ prediction['AC Power in Watts'] }}</p>
+    {% endif %}
+</body>
+</html>
