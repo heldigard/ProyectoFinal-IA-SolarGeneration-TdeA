@@ -83,8 +83,8 @@ A continuación se muestra un ejemplo de una solicitud y respuesta utilizando el
 
 #### Solicitud
 
-![Solicitud FastAPI](screenshots/Template_Request.png)
+![Solicitud Template](screenshots/Template_Request.png)
 
 #### Respuesta
 
-![Respuesta FastAPI](screenshots/Template_Response.png)
+![Respuesta Template](screenshots/Template_Response.png)
