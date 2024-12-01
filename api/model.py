@@ -3,7 +3,7 @@ import pandas as pd
 from pydantic import BaseModel
 
 # Cargar el modelo de LightGBM
-lgbm_model = joblib.load("best_model_pipeline.pkl")
+lgbm_model = joblib.load("../best_model_pipeline.pkl")
 
 
 def predict_lgbm(data: pd.DataFrame):
@@ -16,4 +16,9 @@ def predict_lgbm(data: pd.DataFrame):
 class SolarGenerationData(BaseModel):
     MODULE_TEMP: float
     Amb_Temp: float
-    IRR: float
+    IRR_W_m2: float  # Cambia el nombre del campo
+
+    class Config:
+        fields = {
+            'IRR_W_m2': 'IRR (W/m2)'
+        }

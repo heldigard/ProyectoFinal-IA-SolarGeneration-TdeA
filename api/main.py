@@ -12,7 +12,8 @@ def read_root():
 @app.post("/predict")
 def predict(data: SolarGenerationData):
     # Convertir los datos de entrada a un DataFrame de pandas
-    input_data = pd.DataFrame([data.dict()])
+    input_data = pd.DataFrame([data.dict(by_alias=True)])
+    input_data.rename(columns={"IRR_W_m2": "IRR (W/m2)"}, inplace=True)  # Renombrar la columna
     # Obtener la predicción
     prediction = predict_lgbm(input_data)
     # Devolver la predicción
